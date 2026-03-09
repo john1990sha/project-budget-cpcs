@@ -1,0 +1,39 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2026-03-07 14:22:32.646060",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Kodaikanal Travelogue",
+ "modified": "2026-03-08 13:59:13.629411",
+ "modified_by": "Administrator",
+ "module": "cpcs",
+ "name": "Budget Consumption Log",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Project Budget",
+ "report_name": "Budget Consumption Log",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Auditor"
+  },
+  {
+   "role": "Purchase User"
+  },
+  {
+   "role": "CPCS Budget Manager"
+  }
+ ]
+}

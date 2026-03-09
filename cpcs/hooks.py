@@ -188,3 +188,14 @@ user_data_fields = [
 #	"cpcs.auth.validate"
 # ]
 
+
+# code to calculate the Actual amount based on purchase invoice submit
+# -------------------------
+doc_events = {
+    "Purchase Invoice": {
+        "on_submit": "cpcs.api.update_budget_on_submit",
+        "on_cancel": "cpcs.api.update_budget_on_cancel",
+        "before_submit": "cpcs.overrides.purchase_invoice.before_submit"
+    }
+}
+

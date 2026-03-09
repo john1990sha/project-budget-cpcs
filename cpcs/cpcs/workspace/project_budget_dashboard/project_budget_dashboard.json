@@ -1,0 +1,63 @@
+{
+ "category": "Modules",
+ "charts": [
+  {
+   "chart_name": "Project Budget Utilization",
+   "label": " Project Budget Utilization"
+  }
+ ],
+ "charts_label": "Project Budget Chart",
+ "creation": "2026-03-08 17:02:51.965975",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "hr",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Project Budget Dashboard",
+ "links": [],
+ "modified": "2026-03-08 17:40:18.383897",
+ "modified_by": "Administrator",
+ "module": "cpcs",
+ "name": "Project Budget Dashboard",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Project Budgets",
+   "link_to": "Project Budget",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Budget Consumption Log",
+   "link_to": "Budget Consumption Log",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Projects",
+   "link_to": "Project",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Project Budget Summary",
+   "link_to": "Project Budget Summary",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Budget Consumption Log",
+   "link_to": "Budget Consumption Log",
+   "type": "Report"
+  }
+ ],
+ "shortcuts_label": "Project Budget List"
+}

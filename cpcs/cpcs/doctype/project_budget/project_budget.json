@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-26 15:03:37.695411",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "section_break_wsuji",
+  "budget_items",
+  "estimated_cost",
+  "total_estimated_budget",
+  "total_actual_cost",
+  "budget_utilization_percentage",
+  "column_break_rnlga",
+  "variance",
+  "variance_percentage",
+  "column_break_izfnm",
+  "budget_status",
+  "amended_from",
+  "status",
+  "section_break_tvtn8",
+  "revision_no",
+  "is_active_revision",
+  "previous_revision"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_estimated_budget",
+   "fieldtype": "Currency",
+   "label": "Estimated Budget",
+   "precision": "1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project Budget",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Section Break",
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_actual_cost",
+   "fieldtype": "Currency",
+   "label": "Actual Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance",
+   "fieldtype": "Currency",
+   "label": "Variance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance_percentage",
+   "fieldtype": "Percent",
+   "label": "Variance Percentage",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.budget_status",
+   "fieldname": "budget_status",
+   "fieldtype": "Select",
+   "label": "Budget Status",
+   "options": "Under Budget\nOn Budget\nOver Budget",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_wsuji",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "budget_items",
+   "fieldtype": "Table",
+   "label": "Budget Items",
+   "options": "Budget Items",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rnlga",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_izfnm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending Approval\nApproved\nRejected"
+  },
+  {
+   "fieldname": "budget_utilization_percentage",
+   "fieldtype": "Percent",
+   "label": "Budget Utilization %",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_tvtn8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "revision_no",
+   "fieldtype": "Int",
+   "label": "Revision No",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active_revision",
+   "fieldtype": "Check",
+   "label": "Is Active Revision",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previous_revision",
+   "fieldtype": "Link",
+   "label": "Previous Revision",
+   "options": "Project Budget",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-05 11:53:14.185840",
+ "modified_by": "Administrator",
+ "module": "cpcs",
+ "name": "Project Budget",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
