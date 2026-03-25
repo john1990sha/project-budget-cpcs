@@ -196,6 +196,18 @@ doc_events = {
         "on_submit": "cpcs.api.update_budget_on_submit",
         "on_cancel": "cpcs.api.update_budget_on_cancel",
         "before_submit": "cpcs.overrides.purchase_invoice.before_submit"
+    },
+    "Expense Claim": {
+        "on_submit": "cpcs.api.update_budget_from_expense_claim",
+        "on_cancel": "cpcs.api.update_budget_on_cancel_expense_claim"
+    },
+    "Journal Entry": {
+        "on_submit": "cpcs.api.update_budget_from_journal_entry",
+        "on_cancel": "cpcs.api.cancel_budget_from_journal_entry",
+        "validate": "cpcs.overrides.journal_entry.apply_cost_type_journal"
+    },
+    "Purchase Order": {
+        "on_submit": "cpcs.api.update_budget_from_po",
+        "on_cancel": "cpcs.api.cancel_budget_from_po"
     }
 }
-

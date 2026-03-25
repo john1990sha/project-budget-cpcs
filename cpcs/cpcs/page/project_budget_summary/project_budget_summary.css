@@ -1,0 +1,33 @@
+.title {
+    text-align: center;
+}
+
+.budget-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.budget-table th,
+.budget-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Print Style */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #report-area, #report-area * {
+        visibility: visible;
+    }
+
+    #report-area {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}

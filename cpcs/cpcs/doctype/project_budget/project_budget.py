@@ -4,6 +4,7 @@
 import frappe
 from frappe.model.document import Document
 from frappe import _
+from frappe.utils import flt
 
 class ProjectBudget(Document):
 
@@ -11,20 +12,24 @@ class ProjectBudget(Document):
 
         total_estimated = 0
         total_actual = 0
+        total_committed = 0
 
         for row in self.budget_items:
-            estimate = row.estimate_cost or 0
-            actual = row.actual_cost or 0
-
-            row.variance = estimate - actual
+            estimate = flt(row.estimate_cost)
+            actual = flt(row.actual_cost)
+            committed = flt(row.committed_cost)
+ 
+            row.variance = estimate - (committed + actual)
 
             total_estimated += estimate
             total_actual += actual
+            total_committed += committed
 
         self.total_estimated_budget = total_estimated
         self.total_actual_cost = total_actual
+        self.total_committed_cost = total_committed
 
-        self.variance = total_estimated - total_actual
+        self.variance = total_estimated - (total_committed + total_actual)
 
         self.variance_percentage = (
             (self.variance / total_estimated) * 100
@@ -39,7 +44,7 @@ class ProjectBudget(Document):
 
         # 🔥 New Logic
         if total_estimated > 0:
-            self.budget_utilization_percentage = (total_actual / total_estimated) * 100
+            self.budget_utilization_percentage = ((total_actual + total_committed) / total_estimated) * 100
         else:
             self.budget_utilization_percentage = 0
 

@@ -20,7 +20,7 @@
  "is_standard": 1,
  "label": "Project Budget Dashboard",
  "links": [],
- "modified": "2026-03-08 17:40:18.383897",
+ "modified": "2026-03-18 11:45:09.252891",
  "modified_by": "Administrator",
  "module": "cpcs",
  "name": "Project Budget Dashboard",
@@ -42,6 +42,18 @@
   },
   {
    "doc_view": "",
+   "label": "Purchase Invoice List",
+   "link_to": "Purchase Invoice",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Expense Claim LIst",
+   "link_to": "Expense Claim",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
    "label": "Projects",
    "link_to": "Project",
    "type": "DocType"
@@ -54,9 +66,21 @@
   },
   {
    "doc_view": "",
-   "label": "Budget Consumption Log",
+   "label": "Budget Consumption Log Report",
    "link_to": "Budget Consumption Log",
    "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Journal Entry List",
+   "link_to": "Journal Entry",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Project Budget Summary View",
+   "link_to": "project-budget-summary",
+   "type": "Page"
   }
  ],
  "shortcuts_label": "Project Budget List"

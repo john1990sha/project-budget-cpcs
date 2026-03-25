@@ -46,6 +46,24 @@ frappe.ui.form.on('Project Budget', {
                 });
             });
         }
+        // code for utilization bar
+        // render_total_budget_bar(frm);
+        if (frm.doc.budget_utilization_percentage >= 80 && frm.doc.budget_utilization_percentage < 100) {
+
+            frm.dashboard.set_headline_alert(
+                __("⚠ Budget utilization above 80%"),
+                "orange"
+            );
+        }
+
+        if (frm.doc.budget_utilization_percentage >= 100) {
+
+            frm.dashboard.set_headline_alert(
+                __("❗ Budget exceeded"),
+                "red"
+            );
+        }
     }
 
 });
+

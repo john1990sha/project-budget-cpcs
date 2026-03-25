@@ -26,7 +26,7 @@ def before_submit(doc, method):
         if budget.status != "Approved":
             frappe.throw(_("Project Budget {0} is not Approved.").format(budget.name))
 
-        # 🔥 Calculate new utilization after this invoice
+        # Calculate new utilization after this invoice
         new_actual = (budget.total_actual_cost or 0) + (item.amount or 0)
 
         if budget.total_estimated_budget and budget.total_estimated_budget > 0:
@@ -34,13 +34,13 @@ def before_submit(doc, method):
         else:
             new_utilization = 0
 
-        # 🟠 Warning zone
+        # Warning zone
         if 100 < new_utilization <= 110:
             frappe.msgprint(
                 _("Warning: Budget utilization will reach {0:.2f}%").format(new_utilization)
             )
 
-        # 🔴 Hard block
+        # Hard block
         if new_utilization > 110:
             if "Accounts Manager" not in frappe.get_roles():
                 frappe.throw(

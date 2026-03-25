@@ -32,6 +32,12 @@ def get_columns():
             "width": 150
         },
         {
+            "label": "Total Committed",
+            "fieldname": "total_committed_cost",
+            "fieldtype": "Currency",
+            "width": 150
+        },
+        {
             "label": "Variance",
             "fieldname": "variance",
             "fieldtype": "Currency",
@@ -78,6 +84,7 @@ def get_data(filters):
             "project",
             "total_estimated_budget",
             "total_actual_cost",
+            "total_committed_cost",
             "variance",
             "variance_percentage",
             "budget_status",

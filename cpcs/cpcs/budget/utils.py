@@ -13,3 +13,25 @@ def get_active_budget(project):
     )
 
     return budget[0].name if budget else None
+
+## account mapping with cost type
+def get_cost_type_from_account(account):
+    """
+    Fetch cost type from Account Cost Type Mapping
+    """
+
+    if not account:
+        return None
+
+    mapping = frappe.get_all(
+        "Account Cost Type Mapping",
+        filters={"account": account},
+        fields=["cost_type"],
+        order_by="priority asc",
+        limit=1
+    )
+
+    if mapping:
+        return mapping[0].cost_type
+
+    return None
